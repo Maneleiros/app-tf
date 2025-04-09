@@ -80,7 +80,7 @@ jobs:
 
       - name: AWS Plan Copy
         id: copyfrom
-        run: aws s3 cp s3://${{ secrets.BUCKET}}/terraform.tfstate terraform.tfstate 
+        run: aws s3 cp s3://mybucketmlf-git/tfstate/terraform.tfstate terraform.tfstate 
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
